@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.zsolt.simplechat</groupId>
   <artifactId>simple-chat-server</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <name>SimpleChat Server</name>
   
   <parent>
@@ -20,5 +20,28 @@
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
   	</dependency>
+  	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
   </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>com.heroku.sdk</groupId>
+  			<artifactId>heroku-maven-plugin</artifactId>
+  			<version>3.0.3</version>
+  			<configuration>
+  				<includeTarget>false</includeTarget>
+  				<includes>
+  					<include>target/simple-chat-server${project.version}.jar</include>
+  				</includes>
+  				<processTypes>
+  					<web>java -jar target/simple-chat-server${project.version}.jar</web>
+  				</processTypes>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
