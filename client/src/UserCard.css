@@ -1,0 +1,31 @@
+.UserCard {
+    height: 60px;
+    margin: 10px 0px;
+    background-color: hsl(192, 44%, 64%);
+    color: hsl(194, 45%, 30%);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.UserCard .name {
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.UserCard:hover {
+    background-color: hsl(192, 24%, 48%);
+    color: hsl(0, 0%, 90%);
+}
+
+.UserCard.selected {
+    background-color: hsl(192, 24%, 48%);
+    color: hsl(0, 0%, 90%);
+}
+
+.UserCard.new-msg {
+    background-color: hsl(168, 70%, 67%);
+}

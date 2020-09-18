@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+body, button, input {
+  font-family: 'Roboto', sans-serif;
+}
+
+#react {
+  height: 100%;
+}

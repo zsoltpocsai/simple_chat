@@ -1,0 +1,7 @@
+.UserList {
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding: 35px 25px;
+    background-color: hsl(192, 57%, 70%);
+}

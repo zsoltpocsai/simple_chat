@@ -1,0 +1,29 @@
+.MessageHolder {
+    padding: 5px;
+    overflow: hidden;
+}
+
+.Message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    float: left;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(194, 45%, 30%);
+}
+
+.Message.host {
+    float: right;
+    background-color: hsl(192, 57%, 70%);
+}
+
+.Time {
+    text-align: right;
+    width: 30px;
+    font-size: 70%;
+    height: 100%;
+    margin-left: 10px;
+}
