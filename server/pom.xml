@@ -28,17 +28,41 @@
   
   <build>
   	<plugins>
+ 		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<configuration>
+				<archive>
+					<manifest>
+						<addClasspath>true</addClasspath>
+              			<mainClass>io.zsolt.simplechat.App</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+	  	<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<executions>
+				<execution>
+					<goals>
+						<goal>repackage</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
   		<plugin>
   			<groupId>com.heroku.sdk</groupId>
   			<artifactId>heroku-maven-plugin</artifactId>
   			<version>3.0.3</version>
   			<configuration>
+  				<appName>whispering-harbor-64839</appName>
   				<includeTarget>false</includeTarget>
   				<includes>
-  					<include>target/simple-chat-server${project.version}.jar</include>
+  					<include>target/simple-chat-server-${project.version}.jar</include>
   				</includes>
   				<processTypes>
-  					<web>java -jar target/simple-chat-server${project.version}.jar</web>
+  					<web>java -jar target/simple-chat-server-${project.version}.jar</web>
   				</processTypes>
   			</configuration>
   		</plugin>

@@ -1,7 +1,16 @@
 .MessagesWindow {
+    overflow-y: auto;
+    height: 560px;
+    width: 800px;
+    padding: 20px;
+    background-color: hsl(0, 0%, 88%);
+}
+
+.MessagesWindow .flex-container {
     display: flex;
     flex-direction: column-reverse;
-    padding: 20px;
-    height: 80%;
-    background-color: hsl(0, 0%, 90%);
+}
+
+.MessagesWindow > :first-child {
+    padding-bottom: 20px;
 }

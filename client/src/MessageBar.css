@@ -1,5 +1,5 @@
 .MessageBar {
-    height: 10%;
+    height: 70px;
     background-color: hsl(0, 0%, 95%);
 }
 
@@ -12,20 +12,26 @@
     background-color: inherit;
 }
 
+.MessageBar input:focus {
+    border: 2px solid hsl(0, 0%, 80%);
+    border-radius: 5px;
+}
+
 .MessageBar button {
     display: block;
-    padding: 15px 25px;
+    padding: 10px 25px;
     margin: auto;
     border: none;
     border-radius: 5px;
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(192, 57%, 70%);
+    color: hsl(192, 57%, 20%);
 }
 
 .MessageBar button:hover {
-    background-color: hsl(0, 0%, 85%);
+    background-color: hsl(192, 57%, 60%);
 }
 
 .btn-holder {
-    display: inline-block;
+    display: inline-flex;
     width: 20%;
 }

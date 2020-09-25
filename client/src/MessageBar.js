@@ -7,7 +7,22 @@ class MessageBar extends React.Component {
     super();
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.state = {messageText: ""};
+  }
+
+  onKeyDown(event) {
+    if (event.key === "Enter") {
+      this.submitMessage();
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("keydown", this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.onKeyDown);
   }
 
   handleInputChange(event) {

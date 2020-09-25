@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 html, body {
@@ -14,8 +15,24 @@ body {
 
 body, button, input {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 #react {
   height: 100%;
 }
+
+/* 
+Colors
+
+hsl(0, 0%, 88%)     - grey-dark
+hsl(0, 0%, 95%)     - grey-light
+hsl(0, 0%, 40%)     - grey-text
+hsl(192, 57%, 70%)  - main-1
+hsl(192, 57%, 60%)  - main-1-hover
+hsl(192, 57%, 20%)  - main-1-text
+hsl(192, 57%, 80%)  - main-1-text-light
+hsl(192, 44%, 64%)  - user-card
+hsl(192, 24%, 48%)  - user-card-hover
+hsl(168, 70%, 67%)  - new-message
+*/

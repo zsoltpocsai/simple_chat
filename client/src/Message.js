@@ -14,7 +14,7 @@ function Message(props) {
   }
 
   return (
-    <div className="MessageHolder">
+    <div className="MessageHolder" id={props.id}>
       <div 
         className={sender.name === props.host.name ? "Message host" : "Message"}>
         <div className="Text">{content}</div>

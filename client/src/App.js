@@ -77,8 +77,7 @@ class App extends React.Component {
   }
 
   setPartner(user) {
-    this.setState({ partner: user }); 
-    console.log("Partner: " + JSON.stringify(user));
+    this.setState({ partner: user });
   }
 
   render() {

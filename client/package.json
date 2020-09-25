@@ -1,11 +1,12 @@
 {
   "name": "simple-chat",
-  "version": "0.1.0",
+  "version": "1.0.0-SNAPSHOT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "env-cmd": "^10.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -15,7 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:dev": "env-cmd -f .env.dev npm run start",
+    "start:prod": "env-cmd -f .env.prod npm run start",
+    "build:prod": "env-cmd -f .env.prod npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -2,7 +2,7 @@
     height: 60px;
     margin: 10px 0px;
     background-color: hsl(192, 44%, 64%);
-    color: hsl(194, 45%, 30%);
+    color: hsl(192, 57%, 20%);
     font-size: 20px;
     border-radius: 5px;
 }
@@ -18,12 +18,11 @@
 
 .UserCard:hover {
     background-color: hsl(192, 24%, 48%);
-    color: hsl(0, 0%, 90%);
 }
 
 .UserCard.selected {
     background-color: hsl(192, 24%, 48%);
-    color: hsl(0, 0%, 90%);
+    color: hsl(192, 57%, 80%);
 }
 
 .UserCard.new-msg {

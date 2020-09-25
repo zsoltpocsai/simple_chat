@@ -6,7 +6,22 @@ class Login extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.state = {error: "", username: ""};
+  }
+
+  onKeyDown(event) {
+    if (event.key === "Enter") {
+      this.handleSubmit();
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("keydown", this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.onKeyDown);
   }
 
   handleChange(e) {
@@ -16,7 +31,7 @@ class Login extends React.Component {
     }
   }
 
-  handleSubmit(e) {
+  handleSubmit() {
     const usernames = this.props.users.map(user => user.name);
     const submittedName = this.state.username;
 
