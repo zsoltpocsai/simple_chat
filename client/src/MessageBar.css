@@ -1,12 +1,12 @@
 .MessageBar {
-    height: 70px;
+    height: 10%;
     background-color: hsl(0, 0%, 95%);
 }
 
 .MessageBar input {
     display: inline-block;
     border: none;
-    padding: 20px;
+    padding: 0.75em;
     height: 100%;
     width: 80%;
     background-color: inherit;
@@ -17,9 +17,14 @@
     border-radius: 5px;
 }
 
+.MessageBar .btn-holder {
+    display: inline-flex;
+    width: 20%;
+}
+
 .MessageBar button {
     display: block;
-    padding: 10px 25px;
+    padding: 0.5em 0.75em;
     margin: auto;
     border: none;
     border-radius: 5px;
@@ -29,9 +34,4 @@
 
 .MessageBar button:hover {
     background-color: hsl(192, 57%, 60%);
-}
-
-.btn-holder {
-    display: inline-flex;
-    width: 20%;
 }

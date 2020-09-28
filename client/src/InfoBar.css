@@ -1,25 +1,48 @@
 .InfoBar {
-    height: 70px;
-    padding: 15px;
+    height: 10%;
+    padding: 0.75em;
     background-color: hsl(0, 0%, 95%);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
     color: hsl(0, 0%, 40%);
-    font-size: 20px;
 }
 
-.InfoBar .btn-logout {
+.InfoBar > [class^="col"] {
+    overflow: hidden;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.InfoBar .col-1 {
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.InfoBar .col-2 {
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.InfoBar > * > [class^="btn"] {
     border: none;
     display: block;
     border-radius: 5px;
-    padding: 10px 25px;
-    margin-left: 30px;
+    padding: 0.5em 0.75em;
+    margin: 0em 0.5em;
     background-color: hsl(0, 0%, 88%);
     color: hsl(0, 0%, 40%);
 }
 
-.InfoBar .btn-logout:hover {
+.InfoBar > * > [class^="btn"]:hover {
     background-color: hsl(0, 0%, 78%);
+}
+
+.InfoBar .btn-logout {
+    margin-left: 1em;
+}
+
+@media only screen and (min-width: 650px) {
+    .InfoBar .btn-userlist {
+        display: none;
+    }
 }

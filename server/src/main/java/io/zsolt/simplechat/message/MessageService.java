@@ -44,10 +44,10 @@ public class MessageService {
 		messageDAO.add(message);
 		
 		// for log
-		ObjectMapper mapper = new ObjectMapper();
-		try {
-			System.out.println("Message received: " + mapper.writeValueAsString(message));
-		} catch (Exception e) {}
+//		ObjectMapper mapper = new ObjectMapper();
+//		try {
+//			System.out.println("Message received: " + mapper.writeValueAsString(message));
+//		} catch (Exception e) {}
 	}
 	
 	public void updateMessage(Message message) {

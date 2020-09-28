@@ -1,6 +1,7 @@
 .MessageHolder {
-    padding: 5px;
+    padding: 0.5em;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .Message {
@@ -8,11 +9,10 @@
     flex-direction: row;
     align-items: flex-end;
     float: left;
-    max-width: 500px;
-    padding: 10px;
+    max-width: 80%;
+    padding: 0.5em;
     border-radius: 5px;
     background-color: hsl(0, 0%, 95%);
-    color: hsl(192, 57%, 20%);
 }
 
 .Message.host {
@@ -22,8 +22,7 @@
 
 .Time {
     text-align: right;
-    width: 30px;
-    font-size: 70%;
+    font-size: 0.75em;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 0.75em;
 }

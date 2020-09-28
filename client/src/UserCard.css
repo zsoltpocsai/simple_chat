@@ -1,19 +1,19 @@
 .UserCard {
-    height: 60px;
+    min-height: 2em;
+    line-height: 2em;
     margin: 10px 0px;
+    padding: 0.25em;
+    text-align: center;
     background-color: hsl(192, 44%, 64%);
     color: hsl(192, 57%, 20%);
-    font-size: 20px;
     border-radius: 5px;
+    cursor: default;
 }
 
-.UserCard .name {
-    height: 100%;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: default;
+.UserCard p {
+    line-height: 1.25em;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .UserCard:hover {
@@ -22,9 +22,13 @@
 
 .UserCard.selected {
     background-color: hsl(192, 24%, 48%);
-    color: hsl(192, 57%, 80%);
+    color: hsl(192, 57%, 10%);
 }
 
 .UserCard.new-msg {
     background-color: hsl(168, 70%, 67%);
+}
+
+@media only screen and (min-width: 650px) {
+
 }

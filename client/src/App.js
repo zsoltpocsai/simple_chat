@@ -34,6 +34,7 @@ class App extends React.Component {
       clearInterval(fetchDataInterval);
       clearInterval(pingHostInterval);
     });
+    console.log(window.innerWidth);
   }
 
   fetchUsers() {
@@ -80,6 +81,10 @@ class App extends React.Component {
     this.setState({ partner: user });
   }
 
+  showUserList() {
+    document.getElementById("UserList").focus();
+  }
+
   render() {
     const host = this.state.host;
     const users = this.state.users;
@@ -88,16 +93,17 @@ class App extends React.Component {
     if (host) {
       return (
         <div className="App">
-          <UserList 
+          <UserList
             users={users}
             messages={this.state.messages}
-            onSelect={this.setPartner} 
+            onSelect={this.setPartner}
           />
           <TalkSection 
             messages={this.state.messages} 
             host={host} 
             partner={partner} 
             onLogout={this.logoutUser}
+            onShowUserList={this.showUserList}
           />
         </div>
       );

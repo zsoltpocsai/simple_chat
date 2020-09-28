@@ -14,6 +14,7 @@ class TalkSection extends React.Component {
     this.createMessage = this.createMessage.bind(this);
     this.getMessagesWithPartner = this.getMessagesWithPartner.bind(this);
     this.updateMessagesToBeRead = this.updateMessagesToBeRead.bind(this);
+    this.showUserList = this.showUserList.bind(this);
     this.messageService = new MessageService();
   }
 
@@ -60,6 +61,10 @@ class TalkSection extends React.Component {
     });
   }
 
+  showUserList() {
+    this.props.onShowUserList();
+  }
+
   render() {
     const messagesToShow = this.getMessagesWithPartner();
     this.updateMessagesToBeRead(messagesToShow);
@@ -67,7 +72,9 @@ class TalkSection extends React.Component {
       <div className="TalkSection">
         <InfoBar 
           host={this.props.host}
+          partner={this.props.partner}
           onLogout={this.handleLogout}
+          onShowUserList={this.showUserList}
         />
         <MessagesWindow 
           messages={messagesToShow} 

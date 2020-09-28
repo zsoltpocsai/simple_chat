@@ -48,7 +48,7 @@ class UserList extends React.Component {
     });
 
     return (
-      <div className="UserList">
+      <div id="UserList" tabIndex="-1">
         {users}
       </div>
     );

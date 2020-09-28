@@ -67,7 +67,7 @@ public class UserService {
 			} else {
 				delete(user);
 				cleanUpMessages(user);
-				System.out.println("User removed: " + user.getName());
+				//System.out.println("User removed: " + user.getName());
 				break;
 			}
 		}

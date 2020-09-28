@@ -25,9 +25,7 @@ class UserCard extends React.Component {
         onClick={this.handleSelect} 
         className={className}
       >
-        <div className="name">
-          <span><strong>{this.props.user.name}</strong></span>
-        </div>
+        <p>{this.props.user.name}</p>
       </div>
     );
   }
