@@ -2,8 +2,6 @@ package io.zsolt.simplechat.message;
 
 import java.util.List;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.zsolt.simplechat.user.User;
 import io.zsolt.simplechat.user.UserDAO;
 

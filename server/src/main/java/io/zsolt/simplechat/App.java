@@ -5,7 +5,8 @@ import java.util.Map;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+// import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+// import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @SpringBootApplication
 public class App {
@@ -21,4 +22,11 @@ public class App {
 		app.setDefaultProperties(defaultProperties);
 		app.run(args);
 	}
+	
+//	@Override
+//	protected void configure(HttpSecurity http) throws Exception {
+//		http.requiresChannel()
+//			.requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
+//			.requiresSecure();
+//	}
 }

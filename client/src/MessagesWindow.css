@@ -1,6 +1,6 @@
 .MessagesWindow {
     overflow-y: auto;
-    height: 80%;
+    height: 75%;
     width: 100%;
     padding: 0.5em;
     background-color: hsl(0, 0%, 88%);
@@ -16,5 +16,8 @@
     padding-bottom: 20px;
 }
 
-@media only scree and (min-width: 650px) {
+@media only screen and (min-width: 650px) {
+    .MessagesWindow {
+        height: 80%;
+    }
 }

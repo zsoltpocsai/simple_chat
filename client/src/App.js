@@ -34,7 +34,6 @@ class App extends React.Component {
       clearInterval(fetchDataInterval);
       clearInterval(pingHostInterval);
     });
-    console.log(window.innerWidth);
   }
 
   fetchUsers() {
@@ -48,6 +47,13 @@ class App extends React.Component {
         this.setState({ users: users });
       }
     });
+
+    // checks if the selected partner is still exist
+    if (this.state.partner != null && 
+        this.state.users.filter(user => user.id === this.state.partner.id)
+        .length === 0) {
+      this.setState({ partner: null });
+    }
   }
 
   fetchMessages() {
@@ -86,22 +92,18 @@ class App extends React.Component {
   }
 
   render() {
-    const host = this.state.host;
-    const users = this.state.users;
-    const partner = this.state.partner;
-
-    if (host) {
+    if (this.state.host) {
       return (
         <div className="App">
           <UserList
-            users={users}
+            users={this.state.users}
             messages={this.state.messages}
             onSelect={this.setPartner}
           />
           <TalkSection 
             messages={this.state.messages} 
-            host={host} 
-            partner={partner} 
+            host={this.state.host} 
+            partner={this.state.partner}
             onLogout={this.logoutUser}
             onShowUserList={this.showUserList}
           />
@@ -110,7 +112,7 @@ class App extends React.Component {
     } else {
       return (
         <div className="App">
-          <Login users={users} onLogin={this.loginUser} />
+          <Login users={this.state.users} onLogin={this.loginUser} />
         </div>
       );
     }

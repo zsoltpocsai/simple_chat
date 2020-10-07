@@ -43,8 +43,12 @@ class TalkSection extends React.Component {
   getMessagesWithPartner() {
     if (this.props.partner) {
       return this.props.messages.filter(message => {
-        return (message.recipient.name === this.props.partner.name) ||
-        (message.sender.name === this.props.partner.name)
+        if (message.recipient != null && message.sender != null) {
+          return (message.recipient.name === this.props.partner.name) ||
+                 (message.sender.name === this.props.partner.name)
+        } else {
+          return false;
+        }
       });
     } else {
       return [];
